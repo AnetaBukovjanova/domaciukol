@@ -6,9 +6,10 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-<GridPane fx:id="grid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="888.0" prefWidth="241.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<GridPane fx:id="grid" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="865.0" prefWidth="416.0" style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.github.AnetaBukovjanova.domaciukol.ui.HomeController">
   <columnConstraints>
-    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="243.0" minWidth="10.0" prefWidth="208.0" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="217.0" minWidth="10.0" prefWidth="208.0" />
   </columnConstraints>
   <rowConstraints>
     <RowConstraints maxHeight="166.0" minHeight="10.0" prefHeight="62.0" vgrow="SOMETIMES" />
@@ -18,7 +19,7 @@
    <children>
       <VBox fx:id="vbox" prefHeight="353.0" prefWidth="300.0" GridPane.rowIndex="1">
          <children>
-            <Button fx:id="button1" mnemonicParsing="false">
+            <Button fx:id="button1" mnemonicParsing="false" onAction="#hadej">
                <graphic>
                   <ImageView fx:id="image1" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -26,10 +27,10 @@
                   <Tooltip fx:id="tool1" text="Empty Tooltip" />
                </tooltip>
                <VBox.margin>
-                  <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+                  <Insets bottom="10.0" left="50.0" right="60.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="button2" mnemonicParsing="false">
+            <Button fx:id="button2" mnemonicParsing="false" onAction="#hadej">
                <graphic>
                   <ImageView fx:id="image2" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -37,10 +38,10 @@
                   <Tooltip fx:id="tool2" text="Empty Tooltip" />
                </tooltip>
                <VBox.margin>
-                  <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+                  <Insets bottom="10.0" left="50.0" right="60.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="button3" mnemonicParsing="false">
+            <Button fx:id="button3" mnemonicParsing="false" onAction="#hadej">
                <graphic>
                   <ImageView fx:id="image3" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -48,10 +49,10 @@
                   <Tooltip fx:id="tool3" text="Empty Tooltip" />
                </tooltip>
                <VBox.margin>
-                  <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+                  <Insets bottom="10.0" left="50.0" right="60.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="button4" mnemonicParsing="false">
+            <Button fx:id="button4" mnemonicParsing="false" onAction="#hadej">
                <graphic>
                   <ImageView fx:id="image4" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -59,10 +60,10 @@
                   <Tooltip fx:id="tool4" text="Empty Tooltip" />
                </tooltip>
                <VBox.margin>
-                  <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+                  <Insets bottom="10.0" left="50.0" right="60.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="button5" mnemonicParsing="false">
+            <Button fx:id="button5" mnemonicParsing="false" onAction="#hadej">
                <graphic>
                   <ImageView fx:id="image5" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
                </graphic>
@@ -70,15 +71,15 @@
                   <Tooltip fx:id="tool5" text="Empty Tooltip" />
                </tooltip>
                <VBox.margin>
-                  <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+                  <Insets bottom="10.0" left="50.0" right="60.0" top="10.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="button6" mnemonicParsing="false">
+            <Button fx:id="button6" mnemonicParsing="false" onAction="#hadej">
                <tooltip>
                   <Tooltip fx:id="tool6" text="Empty Tooltip" />
                </tooltip>
                <VBox.margin>
-                  <Insets bottom="10.0" left="60.0" right="60.0" top="10.0" />
+                  <Insets bottom="10.0" left="50.0" right="60.0" top="10.0" />
                </VBox.margin>
                <graphic>
                   <ImageView fx:id="image6" fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
@@ -86,15 +87,20 @@
             </Button>
          </children>
       </VBox>
-      <Button fx:id="hadej" mnemonicParsing="false" prefHeight="51.0" prefWidth="173.0" text="HÁDEJ" GridPane.rowIndex="2">
+      <Button fx:id="hadej" mnemonicParsing="false" onAction="#klikHadej" prefHeight="51.0" prefWidth="173.0" text="HÁDEJ" GridPane.columnIndex="1" GridPane.rowIndex="2">
          <GridPane.margin>
             <Insets bottom="20.0" left="30.0" right="30.0" top="20.0" />
          </GridPane.margin>
       </Button>
-      <Label fx:id="label" prefHeight="17.0" prefWidth="100.0" text="Angličtina pro děti">
+      <Label fx:id="label" prefHeight="17.0" prefWidth="105.0" text="Angličtina pro děti">
          <GridPane.margin>
-            <Insets bottom="40.0" left="70.0" right="60.0" top="10.0" />
+            <Insets bottom="40.0" left="60.0" top="10.0" />
          </GridPane.margin>
       </Label>
+      <TextArea fx:id="textarea" prefHeight="707.0" prefWidth="169.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </GridPane.margin>
+      </TextArea>
    </children>
 </GridPane>
